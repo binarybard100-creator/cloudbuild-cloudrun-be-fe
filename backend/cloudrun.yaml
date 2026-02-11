@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-        - image: us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/fastapi:latest
+        - image: us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe/fastapi:latest
           ports:
             - containerPort: 8080
       timeoutSeconds: 300
