@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-        - image: us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe-ar/frontend:latest
+        - image: us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun/frontend:latest
           env:
             - name: VITE_API_URL
               value: "https://fastapi-service-xxxxxxxxxx-uc.a.run.app"
