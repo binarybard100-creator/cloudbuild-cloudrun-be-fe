@@ -1,3 +1,5 @@
+#Allowed allUsers with run.invoker for both frontend and backend
+
 options:
   logging: CLOUD_LOGGING_ONLY
 
