@@ -7,12 +7,12 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [
     'build', '-t',
-    'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe/fastapi:latest',
+    'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe-ar/fastapi:latest',
     './backend'
   ]
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe/fastapi:latest']
+  args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe-ar/fastapi:latest']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: [
@@ -25,12 +25,12 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [
     'build', '-t',
-    'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe/frontend:latest',
+    'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe-ar/frontend:latest',
     './frontend'
   ]
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe/frontend:latest']
+  args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe-ar/frontend:latest']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: [
@@ -40,5 +40,5 @@ steps:
   ]
 
 images:
-- 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe/fastapi:latest'
-- 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe/frontend:latest'
+- 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe-ar/fastapi:latest'
+- 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuild-cloudrun-be-fe-ar/frontend:latest'
